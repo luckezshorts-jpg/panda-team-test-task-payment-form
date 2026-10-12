@@ -1,1 +1,47 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#fff;color:#222}main{min-height:100vh;display:grid;place-items:center;padding:24px}.card{position:relative;width:min(810px,96vw);min-height:585px;border:2px solid #777;padding:36px 20px 24px;background:#fff}.badge{position:absolute;top:8px;left:50%;transform:translateX(-50%);font:700 12px Arial;letter-spacing:.08em;color:#666}.top{display:flex;justify-content:space-between;margin-bottom:26px;color:#0d6670}.netaxept{font-size:42px}.nets{font-size:54px}p{font-size:22px;margin:10px 0}hr{border:0;border-top:2px solid #777;margin:18px 0 14px}.logos{font-weight:700;font-size:12px;margin-bottom:15px}label{display:block;font-size:20px;margin-top:10px;margin-bottom:4px}input,select{height:38px;border:2px solid #bbb;font-size:18px;padding:4px 8px}#card{width:270px}#cvv{width:100px}select{width:90px;margin-right:6px}small{display:block;min-height:18px;color:#c62828}.actions{position:absolute;right:34px;bottom:30px;display:flex;gap:16px}.actions button{min-width:90px;height:42px;font-size:20px;border:2px solid #aaa;background:linear-gradient(#fff,#e7e7e7)}#help{width:36px;height:36px;border-radius:50%;border:0;background:#2aa7c1;color:#fff;font-size:22px;font-weight:700}#result{margin-top:12px;font-size:14px;color:#2e7d32}.bad{border-color:#c62828}
+﻿* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #222; }
+main { min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; padding: 42px 26px 28px; }
+.card { position: relative; width: 806px; max-width: 100%; min-height: 606px; border: 2px solid #777; padding: 14px 16px 72px; background: #fff; }
+.badge { position: absolute; top: -20px; right: 0; font-size: 10px; font-weight: 700; letter-spacing: .08em; color: #777; }
+.top { display: flex; align-items: center; justify-content: space-between; height: 56px; margin-bottom: 32px; color: #0d6670; }
+.netaxept { font-size: 42px; line-height: 1; letter-spacing: -1.5px; }
+.nets { display: flex; align-items: center; gap: 7px; font-size: 56px; line-height: 1; letter-spacing: -2px; }
+.nets-dots { position: relative; display: block; width: 30px; height: 44px; }
+.nets-dots i { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #29a9bd; }
+.nets-dots i:nth-child(1) { left: 0; top: 0; }
+.nets-dots i:nth-child(2) { right: 0; top: 4px; width: 9px; height: 9px; }
+.nets-dots i:nth-child(3) { left: 0; top: 16px; width: 9px; height: 9px; }
+.nets-dots i:nth-child(4) { right: 0; top: 17px; }
+.nets-dots i:nth-child(5) { left: 0; bottom: 0; }
+p { font-size: 20px; line-height: 24px; margin: 0 0 16px; }
+.order p:last-child { margin-bottom: 0; }
+hr { border: 0; border-top: 2px solid #777; margin: 16px 0 14px; }
+.logos { display: flex; align-items: center; gap: 7px; height: 32px; margin-bottom: 16px; }
+.logos img { display: block; width: 48px; height: 32px; object-fit: contain; }
+.field { margin-bottom: 16px; }
+label { display: block; font-size: 20px; line-height: 24px; }
+input, select { font: 20px Arial, sans-serif; color: #222; background: #fff; border: 1px solid #aaa; border-radius: 0; }
+input { height: 34px; padding: 3px 6px; }
+#card { width: 266px; max-width: 100%; }
+#cvv { width: 98px; }
+.expiry-inputs { display: flex; gap: 7px; }
+select { height: 30px; padding: 1px 4px; }
+#m { width: 62px; }
+#y { width: 86px; }
+.security-inputs { display: flex; align-items: center; gap: 6px; }
+small { display: block; color: #c62828; font-size: 12px; margin-top: 4px; }
+small:empty { display: none; }
+.actions { position: absolute; right: 32px; bottom: 22px; display: flex; gap: 16px; }
+.actions button { height: 34px; padding: 2px 11px; font: 20px Arial, sans-serif; color: #222; border: 1px solid #aaa; border-radius: 0; background: linear-gradient(#fff, #e7e7e7); cursor: pointer; }
+#help { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; padding: 0; border-radius: 50%; border: 0; background: #2aa7c1; color: #fff; font: 700 26px Arial, sans-serif; cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #0d6670; outline-offset: 2px; }
+#result { margin-top: 12px; font-size: 14px; color: #2e7d32; }
+.bad { border-color: #c62828; }
+@media (max-width: 520px) {
+main { padding: 32px 12px 20px; }
+.card { padding: 14px 14px 76px; }
+.netaxept { font-size: 32px; }
+.nets { font-size: 42px; }
+p { font-size: 17px; }
+.actions { right: 14px; }
+}

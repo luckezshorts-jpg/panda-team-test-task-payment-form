@@ -1,1 +1,15 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Netaxept Test Payment</title><link rel="stylesheet" href="style.css"></head><body><main><section class="card"><div class="badge">TEST / SANDBOX</div><div class="top"><div class="netaxept">Netaxept</div><div class="nets">nets••</div></div><p><b>Merchant:</b> Test merchant</p><p><b>Amount:</b> 120,00 (EUR)</p><p><b>Order number:</b> Order123</p><p><b>Order description:</b> This is test transaction</p><hr><div class="logos">VISA&nbsp;&nbsp;●●&nbsp;&nbsp;AMEX&nbsp;&nbsp;D&nbsp;&nbsp;DISCOVER</div><form id="f" novalidate><label>Card number</label><input id="card" maxlength="19"><small id="e1"></small><label>Expiry date (month/year)</label><div><select id="m"><option value="">Month</option></select><select id="y"><option value="">Year</option></select></div><small id="e2"></small><label>CVV/CVC/CID</label><div><input id="cvv" maxlength="4"><button type="button" id="help">?</button></div><small id="e3"></small><div class="actions"><button type="button" id="cancel">Cancel</button><button type="submit">Pay</button></div><div id="result"></div></form></section></main><script src="script.js"></script></body></html>
+﻿<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Netaxept Test Payment</title><link rel="stylesheet" href="style.css"></head>
+<body><main><section class="card" aria-label="Test payment">
+<div class="badge">TEST / SANDBOX</div>
+<header class="top"><div class="netaxept">Netaxept</div><div class="nets" aria-label="Nets">nets<span class="nets-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div></header>
+<div class="order"><p><b>Merchant:</b> Test merchant</p><p><b>Amount:</b> 120,00 (EUR)</p><p><b>Order number:</b> Order123</p><p><b>Order description:</b> This is test transaction</p></div>
+<hr>
+<div class="logos" aria-label="Accepted cards"><img src="assets/visa.svg" alt="Visa"><img src="assets/mastercard.svg" alt="Mastercard"><img src="assets/amex.svg" alt="American Express"><img src="assets/diners.svg" alt="Diners Club"><img src="assets/discover.svg" alt="Discover"></div>
+<form id="f" novalidate>
+<div class="field"><label for="card">Card number</label><input id="card" maxlength="19" inputmode="numeric" autocomplete="off" aria-describedby="e1"><small id="e1" aria-live="polite"></small></div>
+<div class="field"><label for="m">Expiry date (month/year)</label><div class="expiry-inputs"><select id="m" aria-label="Expiry month" aria-describedby="e2"></select><select id="y" aria-label="Expiry year" aria-describedby="e2"></select></div><small id="e2" aria-live="polite"></small></div>
+<div class="field"><label for="cvv">CVV/CVC/CID</label><div class="security-inputs"><input id="cvv" maxlength="4" inputmode="numeric" autocomplete="off" aria-describedby="e3"><button type="button" id="help" aria-label="Help with security code">?</button></div><small id="e3" aria-live="polite"></small></div>
+<div class="actions"><button type="button" id="cancel">Cancel</button><button type="submit">Pay</button></div><div id="result" role="status"></div>
+</form></section></main><script src="script.js"></script></body></html>
