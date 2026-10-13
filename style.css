@@ -45,3 +45,10 @@ main { padding: 32px 12px 20px; }
 p { font-size: 17px; }
 .actions { right: 14px; }
 }
+.logos img { transition: box-shadow .15s ease; border-radius: 3px; }
+.logos img.active { box-shadow: 0 0 0 2px #2aa7c1; }
+.test-cards { margin-top: 18px; font-size: 14px; }
+.test-cards summary { cursor: pointer; color: #0d6670; }
+.test-cards p { font-size: 13px; margin: 8px 0; }
+.test-card-list { display: grid; gap: 6px; max-width: 380px; }
+.test-card-list button { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; padding: 6px 8px; border: 1px solid #bbb; background: #fafafa; color: #222; cursor: pointer; text-align: left; }

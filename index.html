@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Netaxept Test Payment</title><link rel="stylesheet" href="style.css"></head>
 <body><main><section class="card" aria-label="Test payment">
@@ -6,10 +6,18 @@
 <header class="top"><div class="netaxept">Netaxept</div><div class="nets" aria-label="Nets">nets<span class="nets-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div></header>
 <div class="order"><p><b>Merchant:</b> Test merchant</p><p><b>Amount:</b> 120,00 (EUR)</p><p><b>Order number:</b> Order123</p><p><b>Order description:</b> This is test transaction</p></div>
 <hr>
-<div class="logos" aria-label="Accepted cards"><img src="assets/visa.svg" alt="Visa"><img src="assets/mastercard.svg" alt="Mastercard"><img src="assets/amex.svg" alt="American Express"><img src="assets/diners.svg" alt="Diners Club"><img src="assets/discover.svg" alt="Discover"></div>
+<div class="logos" aria-label="Accepted cards"><img data-brand="visa" src="assets/visa.svg" alt="Visa"><img data-brand="mastercard" src="assets/mastercard.svg" alt="Mastercard"><img data-brand="amex" src="assets/amex.svg" alt="American Express"><img data-brand="diners" src="assets/diners.svg" alt="Diners Club"><img data-brand="discover" src="assets/discover.svg" alt="Discover"></div>
 <form id="f" novalidate>
-<div class="field"><label for="card">Card number</label><input id="card" maxlength="19" inputmode="numeric" autocomplete="off" aria-describedby="e1"><small id="e1" aria-live="polite"></small></div>
+<div class="field"><label for="card">Card number</label><input id="card" maxlength="23" inputmode="numeric" autocomplete="off" aria-describedby="e1"><small id="e1" aria-live="polite"></small></div>
 <div class="field"><label for="m">Expiry date (month/year)</label><div class="expiry-inputs"><select id="m" aria-label="Expiry month" aria-describedby="e2"></select><select id="y" aria-label="Expiry year" aria-describedby="e2"></select></div><small id="e2" aria-live="polite"></small></div>
 <div class="field"><label for="cvv">CVV/CVC/CID</label><div class="security-inputs"><input id="cvv" maxlength="4" inputmode="numeric" autocomplete="off" aria-describedby="e3"><button type="button" id="help" aria-label="Help with security code">?</button></div><small id="e3" aria-live="polite"></small></div>
 <div class="actions"><button type="button" id="cancel">Cancel</button><button type="submit">Pay</button></div><div id="result" role="status"></div>
-</form></section></main><script src="script.js"></script></body></html>
+</form>
+<details class="test-cards"><summary>Test cards</summary><p>Select a card to fill in test details.</p><div class="test-card-list">
+<button type="button" data-test-card="4242424242424242">Visa <code>4242 4242 4242 4242</code></button>
+<button type="button" data-test-card="5555555555554444">Mastercard <code>5555 5555 5555 4444</code></button>
+<button type="button" data-test-card="378282246310005">American Express <code>3782 8224 6310 005</code></button>
+<button type="button" data-test-card="3056930009020004">Diners Club <code>3056 9300 0902 0004</code></button>
+<button type="button" data-test-card="6011000990139424">Discover <code>6011 0009 9013 9424</code></button>
+</div></details>
+</section></main><script src="script.js"></script></body></html>

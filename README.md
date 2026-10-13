@@ -1,1 +1,2 @@
 test
+The Test cards section fills test details and highlights the detected card brand. Test numbers: Visa 4242424242424242; Mastercard 5555555555554444; American Express 378282246310005; Diners Club 3056930009020004; Discover 6011000990139424. Source: https://docs.stripe.com/testing#cards. Use a future expiry and CVC 123 (American Express: 1234). Both mono and flat/color icon variants are bundled locally.
